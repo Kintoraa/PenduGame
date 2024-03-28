@@ -1,0 +1,37 @@
+{
+  "mangas": [
+    "Naruto",
+    "One Piece",
+    "Dragon Ball",
+    "Death Note",
+    "Attack on Titan"
+  ],
+  "series": [
+    "mentalist",
+    "Game of Thrones",
+    "Friends",
+    "Stranger Things",
+    "The Office"
+  ],
+  "films": [
+    "Inception",
+    "James bond",
+    "Pulp Fiction",
+    "Forrest Gump",
+    "Fast and furious"
+  ],
+  "pays": [
+    "France",
+    "Etats Unis",
+    "Japon",
+    "Royaume Uni",
+    "Allemagne"
+  ],
+  "Jeux vidéo": [
+    "Pokemon",
+    "Super Mario Bros",
+    "Grand Theft Auto",
+    "Minecraft",
+    "League of Legends"
+  ]
+}
