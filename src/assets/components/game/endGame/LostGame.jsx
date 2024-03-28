@@ -1,4 +1,4 @@
-import { EndGame } from "../endGame/EndGame.jsx";
+import { EndGame } from "./EndGame.jsx";
 
 export const LostGame = ({ lives, word }) => {
   return (

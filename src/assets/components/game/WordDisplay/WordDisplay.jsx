@@ -2,7 +2,7 @@ import { useMyContext } from "../../general/Provider.jsx";
 import { useState } from "react";
 import { useCreateCategory } from "../../hooks/UseCreateCategory.jsx";
 import { LetterSelection } from "./LetterSelection.jsx";
-import { WinGame } from "./WinGame.jsx";
+import { WinGame } from "../endGame/WinGame.jsx";
 import { LivesIndicator } from "../LivesIndicator/LivesIndicator.jsx";
 
 export const WordDisplay = ({ decreaseLives, lives }) => {
@@ -49,11 +49,8 @@ const WordLetters = ({ word }) => {
             {!displayedLetters[index] && displayLetter(value, index)}
           </li>
         ))}
-        <WinGame
-          displayLetterLength={displayLetterLength}
-          word={word}
-        ></WinGame>
       </div>
+      <WinGame displayLetterLength={displayLetterLength} word={word}></WinGame>
     </>
   );
 };

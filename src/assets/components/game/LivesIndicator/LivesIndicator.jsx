@@ -1,6 +1,6 @@
 import heart from "../../../utility/image/heart.svg";
 import { useEffect, useState } from "react";
-import { LostGame } from "../WordDisplay/LostGame.jsx";
+import { LostGame } from "../endGame/LostGame.jsx";
 
 const LIFES = 8;
 export const LivesIndicator = ({ lives, word }) => (
