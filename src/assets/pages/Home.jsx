@@ -1,5 +1,5 @@
 import { HomeInterface } from "../components/home/HomeInterface.jsx";
-import { Background } from "../components/general/Background.jsx";
+import { Background } from "../components/background/Background.jsx";
 
 export const Home = () => {
   return (

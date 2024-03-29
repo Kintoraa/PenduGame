@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useMyContext } from "../general/Provider.jsx";
+import { useMyContext } from "../context/Provider.jsx";
 
 export const useCreateCategory = () => {
   const { list } = useMyContext();

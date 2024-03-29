@@ -7,6 +7,7 @@ export const EndGame = ({ msg, backgroundColor, word }) => {
     <>
       <MenuOverlay isOpen={true}></MenuOverlay>
       <dialog
+        tabIndex="-1"
         open={true}
         className={`h-96 w-96 text-center p-5 ${backgroundColor} rounded-lg border-black border-8`}
       >

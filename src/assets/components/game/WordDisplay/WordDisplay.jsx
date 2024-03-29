@@ -1,4 +1,4 @@
-import { useMyContext } from "../../general/Provider.jsx";
+import { useMyContext } from "../../context/Provider.jsx";
 import { useState } from "react";
 import { useCreateCategory } from "../../hooks/UseCreateCategory.jsx";
 import { LetterSelection } from "./LetterSelection.jsx";

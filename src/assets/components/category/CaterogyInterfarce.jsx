@@ -1,5 +1,5 @@
-import { ButtonReturn } from "../general/ButtonReturn.jsx";
-import { Background } from "../general/Background.jsx";
+import { ButtonReturn } from "../home/ButtonReturn.jsx";
+import { Background } from "../background/Background.jsx";
 import { CategoryList } from "./CategoryList.jsx";
 
 export const CaterogyInterfarce = () => {

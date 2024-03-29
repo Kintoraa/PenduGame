@@ -1,7 +1,7 @@
-import { Background } from "../../general/Background.jsx";
+import { Background } from "../../background/Background.jsx";
 import { GameMenu } from "../GameMenu/GameMenu.jsx";
 import { WordDisplay } from "../WordDisplay/WordDisplay.jsx";
-import { useMyContext } from "../../general/Provider.jsx";
+import { useMyContext } from "../../context/Provider.jsx";
 import { Navigate } from "react-router-dom";
 import { UseLives } from "../../hooks/UseLives.jsx";
 

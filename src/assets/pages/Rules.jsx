@@ -1,6 +1,6 @@
-import { Background } from "../components/general/Background.jsx";
+import { Background } from "../components/background/Background.jsx";
 import imgRules from "/src/assets/utility/image/rules.png";
-import { ButtonReturn } from "../components/general/ButtonReturn.jsx";
+import { ButtonReturn } from "../components/home/ButtonReturn.jsx";
 
 export const Rules = () => {
   return (

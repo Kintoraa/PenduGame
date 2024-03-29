@@ -1,7 +1,7 @@
 import data from "/src/data/data.json";
 import { TitleCategory } from "./TitleCategory.jsx";
 import { NavLink } from "react-router-dom";
-import { useMyContext } from "../general/Provider.jsx";
+import { useMyContext } from "../context/Provider.jsx";
 import { useEffect } from "react";
 
 export const CategoryList = () => (
@@ -26,7 +26,7 @@ const ChooseList = ({ children }) => {
         {Object.entries(data).map(([key]) => (
           <NavLink
             to={"/play"}
-            className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-5 my-5 h-20 w-36 m-16 flex justify-center items-center uppercase transition-all duration-200 ease-in-out hover:scale-105 hover:border"
+            className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-black  font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-5 my-5 h-20 w-36 m-16 flex justify-center items-center uppercase transition-all duration-200 ease-in-out hover:scale-105 hover:border"
             key={key}
             onClick={() => handleClick(key)}
           >
