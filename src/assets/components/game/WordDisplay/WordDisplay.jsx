@@ -37,7 +37,7 @@ const WordLetters = ({ word }) => {
       <div className="flex justify-center text-center mb-16 flex-wrap">
         {word.split("").map((value, index) => (
           <li
-            className=" flex list-none h-12 w-12 sm:h-8 sm:w-8 border border-cyan-900 rounded-lg m-2 justify-center items-center"
+            className=" flex list-none h-12 w-12 sm:h-8 sm:w-8 border border-white rounded-lg m-2 justify-center items-center"
             key={index}
           >
             <p
