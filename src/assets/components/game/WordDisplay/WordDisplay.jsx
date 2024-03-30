@@ -45,7 +45,7 @@ const WordLetters = ({ word }) => {
                 displayedLetters[index] ? "visible" : "hidden"
               }`}
             >
-              {value}
+              {displayedLetters[index] ? value : "-"}
             </p>
             {!displayedLetters[index] && displayLetter(value, index)}
           </li>
