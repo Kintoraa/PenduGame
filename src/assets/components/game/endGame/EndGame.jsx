@@ -1,8 +1,16 @@
 import { ButtonCategory } from "../../category/RouteComponent/ButtonCategory.jsx";
 import { ButtonHome } from "../../category/RouteComponent/ButtonHome.jsx";
 import { MenuOverlay } from "../GameMenu/MenuOverlay.jsx";
+import { useMyContext } from "../../context/Provider.jsx";
+import { useEffect } from "react";
 
 export const EndGame = ({ msg, backgroundColor, word }) => {
+  const { setIsEnd } = useMyContext();
+
+  useEffect(() => {
+    setIsEnd(true);
+  }, []);
+
   return (
     <>
       <MenuOverlay isOpen={true}></MenuOverlay>

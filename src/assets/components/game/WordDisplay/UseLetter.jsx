@@ -1,10 +1,9 @@
 import { useMyContext } from "../../context/Provider.jsx";
 import { useEffect, useRef, useState } from "react";
 
-export const useLetter = ({ decreaseLives, word }) => {
-  const { setLetter } = useMyContext();
+export const useLetter = ({ decreaseLives, word, lives }) => {
+  const { setLetter, isEnd } = useMyContext();
   const ref = useRef(null);
-
   const [clickedLetter, setclickedLetter] = useState({});
 
   const handleClick = (letter, index) => {
@@ -20,7 +19,11 @@ export const useLetter = ({ decreaseLives, word }) => {
       const idKey = e.key.toUpperCase();
       const keyLetter = document.getElementById(idKey);
 
-      if (keyLetter.dataset.letter.toUpperCase() === e.key.toUpperCase()) {
+      if (
+        keyLetter &&
+        keyLetter.dataset.letter &&
+        keyLetter.dataset.letter.toUpperCase() === e.key.toUpperCase()
+      ) {
         setLetter(keyLetter.dataset.letter);
         setclickedLetter((prevState) => ({
           ...prevState,
@@ -35,12 +38,15 @@ export const useLetter = ({ decreaseLives, word }) => {
         decreaseLives();
       }
     };
-    window.addEventListener("keydown", keyPress);
+
+    if (lives > 0 && !isEnd) {
+      window.addEventListener("keydown", keyPress);
+    }
 
     return () => {
       window.removeEventListener("keydown", keyPress);
     };
-  }, [clickedLetter]);
+  }, [clickedLetter, isEnd]);
 
   const handleLastButtonKeyDown = (letter, index, e) => {
     if (e.key === "Tab") {
@@ -49,5 +55,10 @@ export const useLetter = ({ decreaseLives, word }) => {
     }
   };
 
-  return { handleClick, handleLastButtonKeyDown, clickedLetter, ref };
+  return {
+    handleClick,
+    handleLastButtonKeyDown,
+    clickedLetter,
+    ref,
+  };
 };

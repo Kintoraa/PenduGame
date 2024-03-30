@@ -1,19 +1,21 @@
 import { useLetter } from "./UseLetter.jsx";
+import { useMyContext } from "../../context/Provider.jsx";
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-export const LetterSelection = ({ decreaseLives, word }) => {
+export const LetterSelection = ({ decreaseLives, word, lives }) => {
   const { handleClick, handleLastButtonKeyDown, clickedLetter, ref } =
     useLetter({
       decreaseLives,
       word,
+      lives,
     });
-
+  const { isEnd } = useMyContext();
   return (
     <>
       <div className="grid grid-cols-10 gap-4 max-w-2xl mx-auto justify-items-center p-5 ">
         {alphabet.map((letter, index) => (
           <button
-            tabIndex="0"
+            tabIndex={isEnd ? -1 : 0}
             key={index}
             ref={index === 0 ? ref : null}
             data-index={index}

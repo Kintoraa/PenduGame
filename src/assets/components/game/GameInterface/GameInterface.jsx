@@ -4,10 +4,15 @@ import { WordDisplay } from "../WordDisplay/WordDisplay.jsx";
 import { useMyContext } from "../../context/Provider.jsx";
 import { Navigate } from "react-router-dom";
 import { UseLives } from "../../hooks/UseLives.jsx";
+import { useEffect } from "react";
 
 export const GameInterface = () => {
-  const { list } = useMyContext();
+  const { list, setIsEnd } = useMyContext();
   const { lives, decreaseLives } = UseLives();
+
+  useEffect(() => {
+    setIsEnd(false);
+  }, []);
 
   return (
     <>

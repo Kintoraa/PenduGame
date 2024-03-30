@@ -10,10 +10,11 @@ export const WordDisplay = ({ decreaseLives, lives }) => {
   return (
     <>
       <LivesIndicator lives={lives} word={word}></LivesIndicator>
-      <WordLetters word={word}></WordLetters>
+      <WordLetters word={word} lives={lives}></WordLetters>
       <LetterSelection
         decreaseLives={decreaseLives}
         word={word}
+        lives={lives}
       ></LetterSelection>
     </>
   );
