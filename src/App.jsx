@@ -1,5 +1,5 @@
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./assets/pages/Home.jsx";
 import { Error } from "./assets/pages/Error.jsx";
 import { Game } from "./assets/pages/Game.jsx";
@@ -10,7 +10,7 @@ import { Rules } from "./assets/pages/Rules.jsx";
 function App() {
   return (
     <Provider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category" element={<Category />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/rules" element={<Rules />} />
           <Route path="*" element={<Error />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }
